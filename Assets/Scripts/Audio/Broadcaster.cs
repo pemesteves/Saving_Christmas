@@ -7,6 +7,9 @@ public class Broadcaster : MonoBehaviour
 {
     [SerializeField]
     private string pathToMusics = null;
+    [SerializeField]
+    private Sprite broadcasterImage = null;
+
     List<AudioClip> musics = new List<AudioClip>();
 
     private float totalBroadcasterTime = 0f;
@@ -38,7 +41,7 @@ public class Broadcaster : MonoBehaviour
             {
                 currentMusic = i;
                 radio.UpdateMusic(musics[i], currentTime - tmp);
-                StartCoroutine(NextMusic(currentTime - tmp));
+                StartCoroutine(NextMusic(musics[i].length - currentTime));
                 break;
             }
             

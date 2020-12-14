@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class Radio : MonoBehaviour
 {
     private AudioSource audioSource;
+    private Image image;
 
     [SerializeField]
     private List<Broadcaster> broadcasters = new List<Broadcaster>();
@@ -16,6 +18,7 @@ public class Radio : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        image = GetComponent<Image>();
 
         broadcasters[0].StartBroadcaster(0);
     }
