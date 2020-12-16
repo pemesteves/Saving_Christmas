@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator = null;
     [SerializeField]
     private Rigidbody2D rb = null;
-    [SerializeField]
-    private SpriteRenderer sr = null;
 
     [SerializeField]
     private float jumpForce = 5f, speed = .2f;
@@ -31,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (horDir < 0)
             {
-                sr.flipX = true;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             }
             else
             {
-                sr.flipX = false;
+                transform.rotation = Quaternion.Euler(Vector3.zero);
             }
 
 
