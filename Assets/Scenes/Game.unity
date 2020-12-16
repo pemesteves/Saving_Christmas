@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 439055348}
   - component: {fileID: 439055350}
   - component: {fileID: 439055351}
-  - component: {fileID: 439055352}
   - component: {fileID: 439055353}
+  - component: {fileID: 439055352}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 439055353}
   rb: {fileID: 439055351}
+  playerArm: {fileID: 2015984989}
   jumpForce: 5
   speed: 0.2
 --- !u!95 &439055353
@@ -1365,6 +1366,7 @@ MonoBehaviour:
   gift: {fileID: 5345038827709123819, guid: f87af74836f0f3148a2ee6eaeb685f2b, type: 3}
   hand: {fileID: 2123566228}
   body: {fileID: 439055347}
+  animator: {fileID: 2015984988}
   force: 1000
 --- !u!1 &2123566228
 GameObject:

@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb = null;
 
     [SerializeField]
+    private PlayerArm playerArm = null;
+
+    [SerializeField]
     private float jumpForce = 5f, speed = .2f;
 
     private bool isJumping = false;
@@ -57,6 +60,16 @@ public class PlayerMovement : MonoBehaviour
     {
         isJumping = jump;
         animator.SetBool("jumping", jump);
+    }
+
+    private void SetArmWalkingParameter()
+    {
+        playerArm.SetWalking(true);
+    }
+
+    private void SetArmIdleParameter()
+    {
+        playerArm.SetWalking(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
