@@ -78,5 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             SetJumping(false);
         }
+
+        Debug.Log(collision.gameObject.tag);
     }
 }
