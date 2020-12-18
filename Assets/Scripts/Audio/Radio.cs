@@ -13,6 +13,7 @@ public class Radio : MonoBehaviour
     private List<Broadcaster> broadcasters = new List<Broadcaster>();
     
     private int currentBroadcaster = 0;
+    private float radioTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,30 @@ public class Radio : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         image = GetComponent<Image>();
 
-        broadcasters[0].StartBroadcaster(0);
+        StartBroadcaster();
+        StartCoroutine(CountTime());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetButtonDown("NextBroadcaster"))
+        {
+            currentBroadcaster = (currentBroadcaster + 1) % broadcasters.Count;
+
+            StartBroadcaster();
+        } else if(Input.GetButtonDown("PreviousBroadcaster"))
+        {
+            currentBroadcaster = currentBroadcaster == 0 ? broadcasters.Count - 1 : currentBroadcaster - 1;
+
+            StartBroadcaster();
+        }
+    }
+
+    private void StartBroadcaster()
+    {
+        broadcasters[currentBroadcaster].StartBroadcaster(radioTime);
+        image.sprite = broadcasters[currentBroadcaster].GetImage();
     }
 
     public void UpdateMusic(AudioClip clip, float time)
@@ -34,5 +52,14 @@ public class Radio : MonoBehaviour
         audioSource.clip = clip;
         audioSource.time = time;
         audioSource.Play();
+    }
+
+    private IEnumerator CountTime()
+    {
+        while(true)
+        {
+            radioTime += Time.deltaTime;
+            yield return null;
+        }
     }
 }

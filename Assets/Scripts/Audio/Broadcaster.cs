@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +21,8 @@ public class Broadcaster : MonoBehaviour
     private void Start()
     {
         musics.AddRange(Resources.LoadAll<AudioClip>(pathToMusics));
+
+        musics.Shuffle();
 
         totalBroadcasterTime = 0f;
         foreach (AudioClip clip in musics)
@@ -63,5 +64,10 @@ public class Broadcaster : MonoBehaviour
             currentMusic = currentMusic + 1 % musics.Count;
             radio.UpdateMusic(musics[currentMusic], 0);
         }
+    }
+
+    public Sprite GetImage()
+    {
+        return broadcasterImage;
     }
 }
