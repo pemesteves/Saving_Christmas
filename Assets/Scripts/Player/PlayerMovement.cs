@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     private void SetJumping(bool jump)
     {
         isJumping = jump;
-        animator.SetBool("jumping", jump);
+        //animator.SetBool("jumping", jump);
     }
 
     private void SetArmWalkingParameter()
