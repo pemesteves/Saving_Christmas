@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: e3d079aab5f06b04dba66ad243912687
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3958543925101612055
+    second: reindeer_0
+  - first:
+      213: -6790452805333474171
+    second: reindeer_1
+  - first:
+      213: 6848912471711945412
+    second: reindeer_2
+  - first:
+      213: -7716857657800796579
+    second: reindeer_3
+  - first:
+      213: 3999450050902269651
+    second: reindeer_4
+  - first:
+      213: -6088798657575551597
+    second: reindeer_5
+  - first:
+      213: -7439972156515768273
+    second: reindeer_6
+  - first:
+      213: -3781569793380574053
+    second: reindeer_7
+  - first:
+      213: 1505068556627665839
+    second: reindeer_8
+  - first:
+      213: -3761265243527415486
+    second: reindeer_9
+  - first:
+      213: 2461873448313640248
+    second: reindeer_10
+  - first:
+      213: 3728216767420715533
+    second: reindeer_11
+  - first:
+      213: 403566223574340694
+    second: reindeer_12
+  - first:
+      213: -8137586983193575151
+    second: reindeer_13
+  - first:
+      213: 8508200380974882819
+    second: reindeer_14
+  - first:
+      213: -1576151898528074226
+    second: reindeer_15
+  - first:
+      213: -5013095708190441238
+    second: reindeer_16
+  - first:
+      213: -3542058609674224848
+    second: reindeer_17
+  - first:
+      213: 1125347166998499305
+    second: reindeer_18
+  - first:
+      213: -5859142964864365042
+    second: reindeer_19
+  - first:
+      213: 8926870612144087086
+    second: reindeer_20
+  - first:
+      213: 6310905535427728830
+    second: reindeer_21
+  - first:
+      213: 6299209496826782395
+    second: reindeer_22
+  - first:
+      213: -8027268367303768212
+    second: reindeer_23
+  - first:
+      213: 1186197201793388698
+    second: reindeer_24
+  - first:
+      213: 7932825055931842431
+    second: reindeer_25
+  - first:
+      213: 2592621272393101662
+    second: reindeer_26
+  - first:
+      213: 776520026247914755
+    second: reindeer_27
+  - first:
+      213: -3112730844165284455
+    second: reindeer_28
+  - first:
+      213: -3793045665546003365
+    second: reindeer_29
+  - first:
+      213: -6226926485839468793
+    second: reindeer_30
+  - first:
+      213: -2210534741067161426
+    second: reindeer_31
+  - first:
+      213: -3683983567574969518
+    second: reindeer_32
+  - first:
+      213: 7980607994956538621
+    second: reindeer_33
+  - first:
+      213: -6997839181318123904
+    second: reindeer_34
+  - first:
+      213: -4771392506772293839
+    second: reindeer_35
+  - first:
+      213: -5011566093808289725
+    second: reindeer_36
+  - first:
+      213: -644512008816255801
+    second: reindeer_37
+  - first:
+      213: 6945204385704599163
+    second: reindeer_38
+  - first:
+      213: -1825431676551905695
+    second: reindeer_39
+  - first:
+      213: 1505217800807368800
+    second: reindeer_40
+  - first:
+      213: 6669639277295000338
+    second: reindeer_41
+  - first:
+      213: -116974547421640762
+    second: reindeer_42
+  - first:
+      213: -7754979055456240782
+    second: reindeer_43
+  - first:
+      213: 9039278656217235235
+    second: reindeer_44
+  - first:
+      213: 7874724913432070379
+    second: reindeer_45
+  - first:
+      213: -2585392997826813622
+    second: reindeer_46
+  - first:
+      213: -8383192068416706160
+    second: reindeer_47
+  - first:
+      213: -2184372253462887528
+    second: reindeer_48
+  - first:
+      213: -6363468951242572315
+    second: reindeer_49
+  - first:
+      213: 1672043360276415333
+    second: reindeer_50
+  - first:
+      213: -3976308119401895888
+    second: reindeer_51
+  - first:
+      213: -3581065642423016144
+    second: reindeer_52
+  - first:
+      213: 6693335949485699813
+    second: reindeer_53
+  - first:
+      213: -1531386799043056007
+    second: reindeer_54
+  - first:
+      213: -6646420448608137052
+    second: reindeer_55
+  - first:
+      213: 2207214335938973497
+    second: reindeer_56
+  - first:
+      213: -5654448379641240579
+    second: reindeer_57
+  - first:
+      213: -283949805443889279
+    second: reindeer_58
+  - first:
+      213: 4815577968934027693
+    second: reindeer_59
+  - first:
+      213: -2085138288547951288
+    second: reindeer_60
+  - first:
+      213: -2831026707019792897
+    second: reindeer_61
+  - first:
+      213: 4639182585950193886
+    second: reindeer_62
+  - first:
+      213: 1380465351965890001
+    second: reindeer_63
+  - first:
+      213: -5983746953314816034
+    second: reindeer_64
+  - first:
+      213: 2079009308603738744
+    second: reindeer_65
+  - first:
+      213: 4957172854049707871
+    second: reindeer_66
+  - first:
+      213: 5549069565750330220
+    second: reindeer_67
+  - first:
+      213: -5704309283735964952
+    second: reindeer_68
+  - first:
+      213: -980566304324956937
+    second: reindeer_69
+  - first:
+      213: 1876676398146044573
+    second: reindeer_70
+  - first:
+      213: 6039204014647629967
+    second: reindeer_71
+  - first:
+      213: -8638995909974818267
+    second: reindeer_72
+  - first:
+      213: 6076322407924162119
+    second: reindeer_73
+  - first:
+      213: -3519834562562406583
+    second: reindeer_74
+  - first:
+      213: 2447399696018540358
+    second: reindeer_75
+  - first:
+      213: -5753924684546022810
+    second: reindeer_76
+  - first:
+      213: -7097311639569684065
+    second: reindeer_77
+  - first:
+      213: 8191705808374401285
+    second: reindeer_78
+  - first:
+      213: 2405456974604707986
+    second: reindeer_79
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: reindeer_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20e8b0768d92eb70800000000000000
+      internalID: 8926870612144087086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2a028a9a94b6750800000000000000
+      internalID: 6299209496826782395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_23
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67012243f9699090800000000000000
+      internalID: -8027268367303768212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_25
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fb224cb5e071e60800000000000000
+      internalID: 7932825055931842431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_26
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51bc1a9f47daf320800000000000000
+      internalID: 2592621272393101662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_28
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d50280acb5dc4d0800000000000000
+      internalID: -3112730844165284455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_29
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c9b4840156c5bc0800000000000000
+      internalID: -3793045665546003365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_31
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 280
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0280b6d5a9251e0800000000000000
+      internalID: -2210534741067161426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_60
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d888b26c91013e0800000000000000
+      internalID: -2085138288547951288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed84db38bffa16040800000000000000
+      internalID: 4639182585950193886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_63
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d559a07ce5682310800000000000000
+      internalID: 1380465351965890001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_65
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a6e0c73ff1adc10800000000000000
+      internalID: 2079009308603738744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_66
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 57
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5797df427a6bc440800000000000000
+      internalID: 4957172854049707871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_68
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 57
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e274fddde836d0b0800000000000000
+      internalID: -5704309283735964952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_69
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc4ef734245462f0800000000000000
+      internalID: -980566304324956937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reindeer_71
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 56
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f885f23ed009fc350800000000000000
+      internalID: 6039204014647629967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
