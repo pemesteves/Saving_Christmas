@@ -10,6 +10,9 @@ public class Radio : MonoBehaviour
     private Image image;
 
     [SerializeField]
+    private GameObject radioCanvas = null;
+
+    [SerializeField]
     private List<Broadcaster> broadcasters = new List<Broadcaster>();
     
     private int currentBroadcaster = 0;
@@ -18,6 +21,7 @@ public class Radio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(radioCanvas);
         audioSource = GetComponent<AudioSource>();
         image = GetComponent<Image>();
 
