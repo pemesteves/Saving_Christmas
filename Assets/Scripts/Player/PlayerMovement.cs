@@ -81,4 +81,9 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.Log(collision.gameObject.tag);
     }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log(other.tag); // Check collisions with particles
+    }
 }

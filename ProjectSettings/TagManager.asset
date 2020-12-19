@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Gift
   - Explosion
+  - Enemy
+  - EnemyFire
   layers:
   - Default
   - TransparentFX
