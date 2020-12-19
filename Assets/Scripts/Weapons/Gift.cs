@@ -3,20 +3,32 @@ using UnityEngine;
 
 public class Gift : MonoBehaviour
 {
-    private bool collidedWithFloor = false;
+    private bool collided = false;
 
     /*[SerializeField]
     private GameObject explosion = null;*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collidedWithFloor) return;
+        if (collided) return;
 
         switch(collision.collider.tag)
         {
             case "Ground":
-                collidedWithFloor = true;
+                collided = true;
                 StartCoroutine(DestroyGift());
+                break;
+            case "Enemy":
+                collided = true;
+                GameObject enemy = collision.gameObject;
+                
+                // Check if this is a penguin
+                Penguin penguin;
+                if ((penguin = enemy.GetComponent<Penguin>()) != null)
+                {
+                    penguin.KillPenguin();
+                    StartCoroutine(DestroyGift());
+                }
                 break;
             default:
                 break;

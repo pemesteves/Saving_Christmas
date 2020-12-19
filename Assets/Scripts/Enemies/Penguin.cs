@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Penguin : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Penguin : MonoBehaviour
     [SerializeField]
     private float speed = .075f;
 
+    private bool isDying = false;
+
     private void Start()
     {
         fire.SetActive(false);
@@ -27,6 +30,8 @@ public class Penguin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDying) return;
+
         float horDir;
         if (player.transform.position.x < transform.position.x)
         {
@@ -49,7 +54,7 @@ public class Penguin : MonoBehaviour
         } else {
             SetWalking(false);
             
-            if(dist < minDistanceToShoot) // Shoot
+            if(dist < minDistanceToShoot)
             {
                 fire.SetActive(true);
             }
@@ -64,5 +69,35 @@ public class Penguin : MonoBehaviour
     private void SetWalking(bool walking)
     {
         animator.SetBool("walking", walking);
+    }
+
+    public void KillPenguin()
+    {
+        animator.SetTrigger("die");
+        fire.SetActive(false);
+        isDying = true;
+
+        StartCoroutine(DestroyPenguin());
+    }
+
+    private IEnumerator DestroyPenguin()
+    {
+        Vector2 rotation = new Vector2(transform.localEulerAngles.x, transform.localEulerAngles.y);
+        for(float t = 0; t <= 1f; t += Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(rotation.x, rotation.y, Mathf.Lerp(0, 90, t)));
+
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1);
+
+        for (float t = 0; t <= 1f; t += Time.deltaTime)
+        {
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.Lerp(1, 0, t));
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }
