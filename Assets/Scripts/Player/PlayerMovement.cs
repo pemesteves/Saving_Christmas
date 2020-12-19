@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerArm playerArm = null;
 
     [SerializeField]
-    private float jumpForce = 5f, speed = .2f;
+    private float jumpForce = 8.5f, speed = .2f;
 
     private bool isJumping = false;
 
@@ -74,11 +74,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             SetJumping(false);
         }
-
-        Debug.Log(collision.gameObject.tag);
     }
 }

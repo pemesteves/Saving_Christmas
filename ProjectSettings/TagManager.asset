@@ -9,6 +9,7 @@ TagManager:
   - Explosion
   - Enemy
   - EnemyFire
+  - Platform
   layers:
   - Default
   - TransparentFX

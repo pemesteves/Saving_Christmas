@@ -6,14 +6,16 @@ public class CameraMovement : MonoBehaviour
     private GameObject player = null;
 
     [SerializeField]
-    private float minX = -15f, maxX = 15f; //Test values -> must be changed according to the level
+    private float minX = -14f, maxX = 118.5f;
 
-    private float cameraYPos, cameraZPos;
+    [SerializeField]
+    private float minY = 4.5f, maxY = 9f; 
+
+    private float cameraZPos;
     private float halfScreenWidth;
 
     private void Start()
     {
-        cameraYPos = transform.position.y;
         cameraZPos = transform.position.z;
 
         Vector2 edgeVector = Camera.main.ViewportToWorldPoint(Vector2.one);
@@ -23,9 +25,19 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float x = transform.position.x;
+        float y = transform.position.y;
+
         if (player.transform.position.x - halfScreenWidth > minX && player.transform.position.x + halfScreenWidth < maxX)
         {
-            transform.position = new Vector3(player.transform.position.x, cameraYPos, cameraZPos);
+            x = player.transform.position.x;
         }
+
+        if(player.transform.position.y > minY && player.transform.position.y < maxY)
+        {
+            y = player.transform.position.y;
+        }
+           
+        transform.position = new Vector3(x, y, cameraZPos);
     }
 }
