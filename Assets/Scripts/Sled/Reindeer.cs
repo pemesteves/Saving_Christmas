@@ -26,9 +26,11 @@ public class Reindeer : MonoBehaviour
             pickedReindeer = true;
             sled.PickedReindeer();
 
-            helpText?.gameObject.SetActive(false);
-            thankYouText?.gameObject.SetActive(true);
-
+            if (helpText != null)
+            {
+                helpText.gameObject.SetActive(false);
+                thankYouText.gameObject.SetActive(true);
+            }
 
             StartCoroutine(FadeReindeer());
         }
@@ -50,13 +52,19 @@ public class Reindeer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canvasBalloon?.SetActive(true);
+        if (canvasBalloon != null)
+        {
+            canvasBalloon.SetActive(true);
+        }
         CheckCollisionWithPlayer(collision, true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        canvasBalloon?.SetActive(false);
+        if (canvasBalloon != null)
+        {
+            canvasBalloon.SetActive(false);
+        }
         CheckCollisionWithPlayer(collision, false);
     }
 
