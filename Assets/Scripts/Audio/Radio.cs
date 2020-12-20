@@ -23,6 +23,7 @@ public class Radio : MonoBehaviour
     {
         DontDestroyOnLoad(radioCanvas);
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SoundVolume", .5f);
         image = GetComponent<Image>();
 
         StartBroadcaster();
