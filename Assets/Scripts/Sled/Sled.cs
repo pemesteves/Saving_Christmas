@@ -38,6 +38,11 @@ public class Sled : MonoBehaviour
 
     private int numReindeers = 0;
 
+    private void Start()
+    {
+        reindeerNumber.SetNumReindeers(reindeerValues.Count);
+    }
+
     private void Update()
     {
         if (!collidingWithPlayer) return;
@@ -66,8 +71,11 @@ public class Sled : MonoBehaviour
 
         if(numReindeers == reindeerValues.Count)
         {
-            helpText?.SetActive(false);
-            nextLevelText?.SetActive(true);
+            if (helpText != null)
+            {
+                helpText.SetActive(false);
+                nextLevelText.SetActive(true);
+            }
         }
 
         reindeerNumber.SetNumReindeers(reindeerValues.Count - numReindeers);
@@ -75,13 +83,17 @@ public class Sled : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canvasBalloon?.SetActive(true);
+        if(canvasBalloon != null) 
+            canvasBalloon.SetActive(true);
+        
         CheckCollisionWithPlayer(collision, true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        canvasBalloon?.SetActive(false);
+        if (canvasBalloon != null)
+            canvasBalloon.SetActive(false);
+
         CheckCollisionWithPlayer(collision, false);
     }
 
