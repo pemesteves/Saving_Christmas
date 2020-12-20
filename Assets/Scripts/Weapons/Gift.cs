@@ -36,6 +36,14 @@ public class Gift : MonoBehaviour
 
                 StartCoroutine(DestroyGift());
                 break;
+            case "Grinch":
+                collided = true;
+
+                GrinchHealth grinchHealth = collision.gameObject.GetComponent<GrinchHealth>();
+                grinchHealth.DamageByGift();
+
+                StartCoroutine(DestroyGift());
+                break;
             default:
                 break;
         }

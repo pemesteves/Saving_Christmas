@@ -36,6 +36,11 @@ public class GrinchHealth : MonoBehaviour
         }
     }
 
+    public void DamageByGift()
+    {
+        TakeDamage(10);
+    }
+
     public bool IsDead()
     {
         return currentHealth == 0;

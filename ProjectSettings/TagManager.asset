@@ -13,6 +13,7 @@ TagManager:
   - Reindeer
   - RadioCanvas
   - Sea
+  - Grinch
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Gift
   - Player
   - Enemy
-  - 
+  - EvilGift
   - 
   - 
   - 

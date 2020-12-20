@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485b85c0ff250f5469a1131f31927646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gift: {fileID: 5345038827709123819, guid: f87af74836f0f3148a2ee6eaeb685f2b, type: 3}
+  gift: {fileID: 5345038827709123819, guid: 015b98f682da2004e8b988b8b1e012c3, type: 3}
   hand: {fileID: 339960839608047959}
   body: {fileID: 339960841293653552}
   player: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3357439289167270047}
   m_Layer: 10
   m_Name: Grinch
-  m_TagString: Enemy
+  m_TagString: Grinch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

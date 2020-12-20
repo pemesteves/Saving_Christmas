@@ -52,6 +52,11 @@ public class PlayerHealth : MonoBehaviour
         TakeDamage(vultureDamage);
     }
 
+    public void DamageByGrinch()
+    {
+        TakeDamage(20f);
+    }
+
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("EnemyFire"))
