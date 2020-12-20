@@ -16,16 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private float jumpForce = 8.5f, speed = .2f;
 
     private bool isJumping = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private bool isDead = false;
 
     // Update is called once per frame
     void Update()
     {
+        if (isDead) return;
+
         if (Input.GetButton("Horizontal"))
         {
             float horDir = Input.GetAxisRaw("Horizontal");
@@ -70,6 +67,27 @@ public class PlayerMovement : MonoBehaviour
     private void SetArmIdleParameter()
     {
         playerArm.SetWalking(false);
+    }
+
+    public void SetIsDead()
+    {
+        isDead = true;
+        
+        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), true);
+        StartCoroutine(DestroyPlayer());
+    }
+
+    private IEnumerator DestroyPlayer()
+    {
+        Vector2 rotation = new Vector2(transform.localEulerAngles.x, transform.localEulerAngles.y);
+        for (float t = 0; t <= 1f; t += Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(rotation.x, rotation.y, Mathf.Lerp(0, -90, t)));
+
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

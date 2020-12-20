@@ -25,6 +25,8 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null) return;
+
         float x = transform.position.x;
         float y = transform.position.y;
 

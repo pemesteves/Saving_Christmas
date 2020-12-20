@@ -32,6 +32,13 @@ public class Penguin : MonoBehaviour
     {
         if (isDying) return;
 
+        if (player == null)
+        {
+            fire.SetActive(false);
+            SetWalking(false);
+            return;
+        }
+
         float horDir;
         if (player.transform.position.x < transform.position.x)
         {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3794881914551610874}
   - component: {fileID: 89942952310961111}
   - component: {fileID: 3450164695683197119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Penguin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -187,6 +187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EnemyFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637130965967278317, guid: ce4627840edf55740a30a0682da4ed9e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4637130965967278318, guid: ce4627840edf55740a30a0682da4ed9e,
         type: 3}

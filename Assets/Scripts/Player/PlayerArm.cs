@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerArm : MonoBehaviour
 {
@@ -12,20 +10,19 @@ public class PlayerArm : MonoBehaviour
     private GameObject body = null;
 
     [SerializeField]
+    private PlayerHealth playerHealth = null;
+
+    [SerializeField]
     private Animator animator = null;
 
     [SerializeField]
     private float force = 1000f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (playerHealth.IsDead()) return;
+
         if(Input.GetButtonDown("Fire1"))
         {
             animator.SetBool("shooting", true);
