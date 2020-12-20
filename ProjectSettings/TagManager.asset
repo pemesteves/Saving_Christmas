@@ -12,6 +12,7 @@ TagManager:
   - Platform
   - Reindeer
   - RadioCanvas
+  - Sea
   layers:
   - Default
   - TransparentFX

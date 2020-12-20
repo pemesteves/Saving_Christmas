@@ -216,7 +216,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 10.421664}
+  m_Offset: {x: 0, y: 26.80675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -227,7 +227,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 29.436232}
+  m_Size: {x: 1, y: 62.2064}
   m_EdgeRadius: 0
 --- !u!1 &98542717
 GameObject:
@@ -658,18 +658,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reindeer: {fileID: 379775646653992252, guid: 928dddebd5ca28f4589478f4d8cfce8d, type: 3}
   reindeerValues:
-  - reindeerPosition: {x: 4, y: -0.1066666}
+  - reindeerPosition: {x: 4, y: 47.113335}
     ropeLength: 1.8
     orderInLayer: -1
-  - reindeerPosition: {x: 5.5, y: -0.1066666}
+  - reindeerPosition: {x: 5.5, y: 47.11333}
     ropeLength: 2.95
     orderInLayer: -3
-  - reindeerPosition: {x: 7, y: -0.1066666}
+  - reindeerPosition: {x: 7, y: 47.11333}
     ropeLength: 4.2
     orderInLayer: -1
-  - reindeerPosition: {x: 8.5, y: -0.1066666}
-    ropeLength: 5.25
-    orderInLayer: -3
   rope: {fileID: 1962969564}
   reindeerNumber: {fileID: 1492699741}
   canvasBalloon: {fileID: 1849079506}
@@ -1456,7 +1453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406502902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.35, y: 0, z: 0}
+  m_LocalPosition: {x: 86.5, y: -5.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1892213053}
@@ -1475,7 +1472,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 12.910788}
+  m_Offset: {x: 0, y: 29.656706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1486,7 +1483,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 34.41448}
+  m_Size: {x: 1, y: 67.90631}
   m_EdgeRadius: 0
 --- !u!1 &406748198
 GameObject:
@@ -9403,7 +9400,7 @@ GameObject:
   - component: {fileID: 1639915381}
   m_Layer: 0
   m_Name: Sea
-  m_TagString: Ground
+  m_TagString: Sea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9905,7 +9902,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12529,7 +12526,7 @@ GameObject:
   - component: {fileID: 1917699270}
   - component: {fileID: 1917699269}
   m_Layer: 0
-  m_Name: Reindeer4
+  m_Name: Reindeer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

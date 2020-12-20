@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -51,6 +52,30 @@ public class PlayerHealth : MonoBehaviour
         if (other.CompareTag("EnemyFire"))
         {
             TakeDamage(enemyFireDamage);
+        }
+    }
+
+    private IEnumerator LoseHealth()
+    {
+        float initialHealth = currentHealth;
+
+        for(float t = 0; t <= 2f; t += Time.deltaTime)
+        {
+            currentHealth = Mathf.Lerp(initialHealth, 0, t / 2f);
+            healthBar.SetHealth(currentHealth);
+
+            yield return null;
+        }
+
+        playerMovement.SetIsDead();
+        gameOverScreen.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Sea"))
+        {
+            StartCoroutine(LoseHealth());
         }
     }
 }
