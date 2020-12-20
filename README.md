@@ -14,5 +14,5 @@ Game developed during the Secret Santa Jam 2020.
 * C#
 * Unity 
 
-#### To play the game download the zip file called 'Saving Christmas!' on releases (or on the itch.io page) and run the executable. 
+#### To play the game download the zip file called 'Saving.Christmas' on releases (or the 'Saving Chritmas!' file on the itch.io page) and run the executable. 
 ### Have fun!
