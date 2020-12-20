@@ -12,9 +12,8 @@ public class Vulture : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer = null;
 
-
     [SerializeField]
-    private float minDistanceToChasePlayer = 20f, minDistanceToShoot = 5f;
+    private float minDistanceToChasePlayer = 20f;
     [SerializeField]
     private float speed = .075f;
     [SerializeField]
@@ -69,29 +68,6 @@ public class Vulture : MonoBehaviour
             chasingPlayer = false;
             StartCoroutine(Fly());
         }
-
-        /*float horDir;
-        if (player.transform.position.x < transform.position.x)
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-            horDir = -1;
-        } else
-        {
-            transform.rotation = Quaternion.Euler(Vector3.zero);
-            horDir = 1;
-        }
-
-        if(dist < minDistanceToWalk && dist > minDistanceToShoot)
-        {
-            transform.Translate(Vector2.right * horDir * speed, Space.World);
-
-            //fire.SetActive(false);
-        } else {
-            if(dist < minDistanceToShoot)
-            {
-                //fire.SetActive(true);
-            }
-        }*/
     }
 
     private IEnumerator Fly()
@@ -132,7 +108,7 @@ public class Vulture : MonoBehaviour
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
         animator.SetTrigger("die");
-        //fire.SetActive(false);
+
         isDying = true;
         StopAllCoroutines();
 
