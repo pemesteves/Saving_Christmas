@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     private PlayerMovement playerMovement = null;
 
     [SerializeField]
-    private float enemyFireDamage = .5f;
+    private float enemyFireDamage = .5f, vultureDamage = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,11 @@ public class PlayerHealth : MonoBehaviour
     public bool IsDead()
     {
         return currentHealth == 0;
+    }
+
+    public void DamageByVulture()
+    {
+        TakeDamage(vultureDamage);
     }
 
     private void OnParticleCollision(GameObject other)

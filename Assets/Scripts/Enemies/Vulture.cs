@@ -22,6 +22,7 @@ public class Vulture : MonoBehaviour
 
     private bool isDying = false;
     private bool chasingPlayer = false;
+    private IEnumerator damagePlayerCoroutine = null;
 
     private void Start()
     {
@@ -122,6 +123,14 @@ public class Vulture : MonoBehaviour
 
     public void KillVulture()
     {
+        if(damagePlayerCoroutine != null)
+        {
+            StopCoroutine(damagePlayerCoroutine);
+            damagePlayerCoroutine = null;
+        }
+
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
         animator.SetTrigger("die");
         //fire.SetActive(false);
         isDying = true;
@@ -132,7 +141,7 @@ public class Vulture : MonoBehaviour
 
     private IEnumerator DestroyVulture()
     {
-        float destroyingTime = 2f;
+        float destroyingTime = 3f;
 
         for (float t = 0; t <= destroyingTime; t += Time.deltaTime)
         {
@@ -141,5 +150,34 @@ public class Vulture : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !isDying)
+        {
+            damagePlayerCoroutine = DamagePlayer(collision.gameObject);
+            StartCoroutine(damagePlayerCoroutine);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && damagePlayerCoroutine != null)
+        {
+            StopCoroutine(damagePlayerCoroutine);
+            damagePlayerCoroutine = null;
+        }
+    }
+
+    private IEnumerator DamagePlayer(GameObject player)
+    {
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        while (true)
+        {
+            playerHealth.DamageByVulture();
+
+            yield return new WaitForSeconds(.5f);
+        }
     }
 }

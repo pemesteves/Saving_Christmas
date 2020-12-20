@@ -27,8 +27,14 @@ public class Gift : MonoBehaviour
                 if ((penguin = enemy.GetComponent<Penguin>()) != null)
                 {
                     penguin.KillPenguin();
-                    StartCoroutine(DestroyGift());
                 }
+                Vulture vulture;
+                if((vulture = enemy.GetComponent<Vulture>()) != null)
+                {
+                    vulture.KillVulture();
+                }
+
+                StartCoroutine(DestroyGift());
                 break;
             default:
                 break;
