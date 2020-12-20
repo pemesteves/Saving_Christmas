@@ -5,6 +5,12 @@ public class GameController : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        if(sceneName == "Menu")
+        {
+            GameObject radioCanvas = GameObject.FindGameObjectWithTag("RadioCanvas");
+            Destroy(radioCanvas);
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 

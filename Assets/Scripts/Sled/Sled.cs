@@ -29,11 +29,25 @@ public class Sled : MonoBehaviour
     [SerializeField]
     private GameObject helpText = null, nextLevelText = null;
 
+    [SerializeField]
+    private GameController gameController = null;
+    [SerializeField]
+    private string nextLevel = "Level1";
+
     private bool collidingWithPlayer = false;
 
     private int numReindeers = 0;
 
-    // OnTriggerEnter2D (collision with player)
+    private void Update()
+    {
+        if (!collidingWithPlayer) return;
+        if (numReindeers < reindeerValues.Count) return;
+
+        if (Input.GetButtonDown("PickItem"))
+        {
+            gameController?.LoadScene(nextLevel);
+        }
+    }
 
     public void PickedReindeer()
     {

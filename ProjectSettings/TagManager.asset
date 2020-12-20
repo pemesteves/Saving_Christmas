@@ -11,6 +11,7 @@ TagManager:
   - EnemyFire
   - Platform
   - Reindeer
+  - RadioCanvas
   layers:
   - Default
   - TransparentFX
