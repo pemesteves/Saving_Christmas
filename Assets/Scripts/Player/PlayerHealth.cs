@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void DamageByGrinch()
     {
-        TakeDamage(20f);
+        TakeDamage(25f);
     }
 
     private void OnParticleCollision(GameObject other)

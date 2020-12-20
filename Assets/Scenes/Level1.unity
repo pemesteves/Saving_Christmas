@@ -676,7 +676,7 @@ MonoBehaviour:
   helpText: {fileID: 591468937}
   nextLevelText: {fileID: 1623364773}
   gameController: {fileID: 485166973}
-  nextLevel: Menu
+  nextLevel: Level2
 --- !u!61 &134205749
 BoxCollider2D:
   m_ObjectHideFlags: 0

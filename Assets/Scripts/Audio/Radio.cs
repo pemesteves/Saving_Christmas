@@ -28,7 +28,7 @@ public class Radio : MonoBehaviour
 
         if (radioInstance != null)
         {
-            Destroy(gameObject);
+            Destroy(radioCanvas);
             return;
         }
 

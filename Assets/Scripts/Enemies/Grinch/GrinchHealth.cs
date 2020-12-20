@@ -12,6 +12,9 @@ public class GrinchHealth : MonoBehaviour
     [SerializeField]
     private GrinchMovement grinchMovement = null;
 
+    [SerializeField]
+    private GameObject winningScreen = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +34,7 @@ public class GrinchHealth : MonoBehaviour
 
             grinchMovement.SetIsDead();
 
-            //winningScreen.SetActive(true);
-            //gameOverScreen.SetActive(true);
+            winningScreen.SetActive(true);
         }
     }
 
