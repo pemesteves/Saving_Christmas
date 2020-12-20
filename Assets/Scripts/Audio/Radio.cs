@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class Radio : MonoBehaviour
@@ -18,9 +19,21 @@ public class Radio : MonoBehaviour
     private int currentBroadcaster = 0;
     private float radioTime = 0;
 
+    private static Radio radioInstance = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        if (radioInstance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        radioInstance = this;
+
         DontDestroyOnLoad(radioCanvas);
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SoundVolume", .5f);
@@ -28,6 +41,14 @@ public class Radio : MonoBehaviour
 
         StartBroadcaster();
         StartCoroutine(CountTime());
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name == "Menu")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -66,5 +87,10 @@ public class Radio : MonoBehaviour
             radioTime += Time.deltaTime;
             yield return null;
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
