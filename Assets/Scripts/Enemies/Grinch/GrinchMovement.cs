@@ -15,7 +15,7 @@ public class GrinchMovement : MonoBehaviour
     private GameObject player = null;
 
     [SerializeField]
-    private float jumpForce = 8.5f, speed = .2f;
+    private float jumpForce = 8.5f, speed = .1f;
 
     private void Start()
     {

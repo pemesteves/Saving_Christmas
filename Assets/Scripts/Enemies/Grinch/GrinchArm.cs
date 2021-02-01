@@ -20,7 +20,7 @@ public class GrinchArm : MonoBehaviour
     private Animator animator = null;
 
     [SerializeField]
-    private float force = 1000f;
+    private float force = 300f;
 
     private void Start()
     {

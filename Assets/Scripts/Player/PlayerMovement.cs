@@ -47,9 +47,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Jump") && !isJumping)
-        {       
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             SetJumping(true);
+        }
+
+        // Jump controlled by the player
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0) 
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
         }
     }
 
