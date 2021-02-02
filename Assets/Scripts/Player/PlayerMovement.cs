@@ -18,33 +18,19 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping = false;
     private bool isDead = false;
 
+    private SpriteRenderer spRend;
+
+    private void Start()
+    {
+        spRend = GetComponent<SpriteRenderer>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (isDead) return;
-
-        if (Input.GetButton("Horizontal"))
-        {
-            float horDir = Input.GetAxisRaw("Horizontal");
-
-            if (horDir < 0)
-            {
-                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-            }
-            else
-            {
-                transform.rotation = Quaternion.Euler(Vector3.zero);
-            }
-
-
-            transform.Translate(Vector2.right * horDir * speed, Space.World);
-
-            animator.SetBool("walking", true);
-        }
-        else
-        {
-            animator.SetBool("walking", false);
-        }
+        
+        float horDir = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
@@ -57,6 +43,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
         }
+
+
+        if (horDir != 0)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, horDir < 0 ? 180 : 0, 0));
+
+            transform.Translate(Vector2.right * horDir * speed, Space.World);
+        }
+
+        animator.SetBool("walking", horDir != 0);
     }
 
     private void SetJumping(bool jump)

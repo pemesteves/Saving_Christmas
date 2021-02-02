@@ -2679,7 +2679,7 @@ MonoBehaviour:
   rb: {fileID: 439055351}
   playerArm: {fileID: 2015984989}
   jumpForce: 8.5
-  speed: 0.2
+  speed: 0.1
 --- !u!95 &439055353
 Animator:
   serializedVersion: 3

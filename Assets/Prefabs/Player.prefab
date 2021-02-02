@@ -320,7 +320,7 @@ MonoBehaviour:
   rb: {fileID: 339960841293653556}
   playerArm: {fileID: 339960839649618078}
   jumpForce: 8.5
-  speed: 0.2
+  speed: 0.1
 --- !u!114 &339960841293653561
 MonoBehaviour:
   m_ObjectHideFlags: 0
