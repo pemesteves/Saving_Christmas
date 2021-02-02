@@ -5,6 +5,9 @@ public class Gift : MonoBehaviour
 {
     private bool collided = false;
 
+    [SerializeField]
+    private Rigidbody2D rb = null;
+
     /*[SerializeField]
     private GameObject explosion = null;*/
 
@@ -16,6 +19,7 @@ public class Gift : MonoBehaviour
         {
             case "Ground":
                 collided = true;
+                rb.velocity = new Vector2(rb.velocity.x * .5f, rb.velocity.y);
                 StartCoroutine(DestroyGift());
                 break;
             case "Enemy":
