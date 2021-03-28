@@ -9,7 +9,6 @@ public class GrinchHealth : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer = null;
 
-    [SerializeField]
     private GrinchMovement grinchMovement = null;
 
     [SerializeField]
@@ -18,6 +17,7 @@ public class GrinchHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        grinchMovement = GetComponent<GrinchMovement>();
         currentHealth = maxHealth;
     }
 
@@ -50,6 +50,8 @@ public class GrinchHealth : MonoBehaviour
 
     private void SetHealth()
     {
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.Lerp(1, 0, (maxHealth - currentHealth) / maxHealth));
+        float alpha = Mathf.Lerp(1, 0, (maxHealth - currentHealth) / maxHealth);
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, alpha);
+        grinchMovement.GetGrinchArm().SetColorAlpha(alpha);
     }
 }

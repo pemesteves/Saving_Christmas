@@ -7,14 +7,9 @@ public class GrinchArm : MonoBehaviour
     private GameObject gift = null;
     [SerializeField]
     private GameObject hand = null;
-    [SerializeField]
-    private GameObject body = null;
 
     [SerializeField]
     private GameObject player = null;
-
-    [SerializeField]
-    private GrinchHealth grinchHealth = null;
 
     [SerializeField]
     private Animator animator = null;
@@ -22,8 +17,11 @@ public class GrinchArm : MonoBehaviour
     [SerializeField]
     private float force = 300f;
 
+    private SpriteRenderer spr;
+
     private void Start()
     {
+        spr = GetComponent<SpriteRenderer>();
         StartCoroutine(Shoot());
     }
 
@@ -33,10 +31,6 @@ public class GrinchArm : MonoBehaviour
 
         while (true)
         {
-            if (grinchHealth.IsDead())
-                break;
-
-
             animator.SetBool("shooting", true);
 
             yield return new WaitForSeconds(Random.Range(2.5f, 10));
@@ -60,5 +54,11 @@ public class GrinchArm : MonoBehaviour
     public void SetWalking(bool walking)
     {
         animator.SetBool("walking", walking);
+    }
+
+    public void SetColorAlpha(float alpha)
+    {
+        if (alpha == 0) StopAllCoroutines();
+        spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, alpha);
     }
 }

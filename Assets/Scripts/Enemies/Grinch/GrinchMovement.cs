@@ -5,8 +5,6 @@ public class GrinchMovement : MonoBehaviour
 {
     [SerializeField]
     private Animator animator = null;
-    [SerializeField]
-    private Rigidbody2D rb = null;
 
     [SerializeField]
     private GrinchArm grinchArm = null;
@@ -15,7 +13,7 @@ public class GrinchMovement : MonoBehaviour
     private GameObject player = null;
 
     [SerializeField]
-    private float jumpForce = 8.5f, speed = .1f;
+    private float speed = .1f;
 
     private void Start()
     {
@@ -70,5 +68,10 @@ public class GrinchMovement : MonoBehaviour
     public void SetIsDead()
     {
         Destroy(gameObject);
+    }
+
+    public GrinchArm GetGrinchArm()
+    {
+        return grinchArm;
     }
 }
